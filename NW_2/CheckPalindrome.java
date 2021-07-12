@@ -1,17 +1,22 @@
 package palindrome;
 
-public class CheckPalindrome implements Palindrome{
-    private int reverse;
+public class CheckPalindrome implements Palindrome {
+
+    static private boolean ResultPal(int number) {
+        int reverse=0;
+        int modulNumber = Math.abs(number);
+        while (number != 0) {
+            int remember = number % 10;
+            reverse = reverse * 10 + remember;
+            number = number / 10;
+        }
+        return modulNumber == Math.abs(reverse);
+    }
 
     @Override
     public boolean isPalindrome(int x) {
-        int modulNumber=Math.abs(x);
-        while (x != 0) {
-                int remember = x % 10;
-                reverse = reverse * 10 + remember;
-                x = x / 10;
-        }
-        return modulNumber == Math.abs(reverse);
-
+        return ResultPal(x);
     }
+
 }
+
