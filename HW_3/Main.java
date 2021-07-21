@@ -24,7 +24,6 @@ public class Main{
     public static void printMatrix(int x,int y, Matrix matrix) {
         System.out.println("Матрица: ");
         System.out.println("------");
-        int [][] a = new matrix;
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 System.out.format("%s ", matrix.getElement(i, j));
