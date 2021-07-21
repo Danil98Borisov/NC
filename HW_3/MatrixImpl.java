@@ -1,6 +1,7 @@
 package decorator;
 
 public class MatrixImpl implements Matrix{
+
     private final int[][] matrix;
 
     public MatrixImpl(int[][] matrix) {
@@ -12,3 +13,4 @@ public class MatrixImpl implements Matrix{
         return matrix[i][j];
     }
 }
+
