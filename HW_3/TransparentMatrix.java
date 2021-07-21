@@ -1,14 +1,15 @@
 package decorator;
 
 public class TransparentMatrix implements Matrix {
-    int[][] a;
+    private final Matrix a;
 
-    public TransparentMatrix(int[][] a) {
+    public TransparentMatrix(Matrix a) {
         this.a = a;
     }
 
     @Override
     public int getElement(int i, int j) throws ArrayIndexOutOfBoundsException {
-          return a[i][j];
+
+        return a.getElement(j,i);
     }
 }
